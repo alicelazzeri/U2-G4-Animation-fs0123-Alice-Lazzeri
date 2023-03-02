@@ -8,3 +8,70 @@
 7 ritardare progressivamente l'animazione delle altre 2 parole 
 */
 
+body {
+  font-family: 'Roboto Slab', serif;
+}
+
+#testoAlternato {
+  display: inline-block;
+  border: solid 2px #000000;
+  line-height: 1.5;
+  position: relative;
+}
+
+p {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+i {
+  color: #88aecc;
+  position: absolute;
+  opacity: 0;
+  top: 80px;
+  left: 85%;
+  transform: translate(-50%);
+  animation: animatedWords 12s infinite;
+}
+
+.word1 {
+  animation-delay: 0s;
+}
+
+.word2 {
+  animation-delay: 4s;
+}
+
+.word3 {
+  animation-delay: 8s;
+}
+
+
+@keyframes animatedWords {
+
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 40px);
+
+  }
+
+  10% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+
+  20% {
+    opacity: 0;
+    transform: translate(-50%, 40px);
+    
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 40px);
+  }
+  
+}
+

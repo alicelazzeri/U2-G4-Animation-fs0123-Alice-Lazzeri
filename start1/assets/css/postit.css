@@ -1,0 +1,77 @@
+body {
+  font-family: 'Shantell Sans', cursive;
+  background-color: #666666a1;
+  
+}
+
+#board {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  row-gap: 50px;
+  column-gap: 50px;
+  flex-wrap: wrap;
+  padding-top: 6rem;
+}
+
+.postit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 200px;
+  box-shadow: 5px 5px 18px 0px #000000;
+  transform: scale(1,1);
+  transition: transform 0.5s ease;
+  opacity: 0;
+}
+
+.postit:hover {
+  cursor: pointer;
+  transform: scale(1.2,1.2);
+}
+
+.yellow {
+  background-image: linear-gradient(#fff3a3, #616060);
+  transform: rotate(-5deg);
+  animation: postit 2s 1s forwards;
+}
+
+.green {
+  background-image: linear-gradient(#a3ffb7, #616060);
+  transform: rotate(5deg);
+  animation: postit 2s 2s forwards;
+}
+
+.violet {
+  background-image: linear-gradient(#dfaeff, #616060);
+  transform: rotate(-8deg);
+  animation: postit 2s 3s forwards;
+}
+
+.postit h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: right;
+}
+
+.postit p {
+  font-size: 1rem;
+  text-align: right;
+}
+
+
+@keyframes postit {
+  0% {
+    transform: scale all(0.5);
+  }
+
+  100% {
+    transform: scale all(1);
+    opacity: 1;
+  }
+
+}
+
